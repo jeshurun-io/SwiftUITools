@@ -52,4 +52,9 @@ open class BaseViewModel<View: ModeledView>: ViewModelType {
         
     }
     
+    open func onUpdate() {}
+    open func onLoad() {}
+    open func onAppear() {}
+    open func onDisappear() {}
+    open func handle(error: Error) throws { throw error }
 }
