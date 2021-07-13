@@ -48,4 +48,8 @@ open class BaseViewModel<View: ModeledView>: ViewModelType {
         }
     }
     
+    public init() {
+        
+    }
+    
 }
