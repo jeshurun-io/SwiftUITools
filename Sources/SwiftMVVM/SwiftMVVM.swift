@@ -9,7 +9,7 @@ public protocol ModeledView: View {
     var content: Content { get }
 }
 
-extension ModeledView {
+public extension ModeledView {
     var body: some View {
         vm.view = self
         return content.onAppear(perform: { vm.onAppear() })
