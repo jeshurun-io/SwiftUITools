@@ -27,7 +27,7 @@ public class DependencyContainer: ObservableObject {
     
     private var store: [PartialKeyPath<DependencyFactory>: Any] = [:]
     
-    subscript<D>(dynamicMember keyPath: KeyPath<DependencyFactory, D>) -> D {
+    public subscript<D>(dynamicMember keyPath: KeyPath<DependencyFactory, D>) -> D {
         get {
             if let anyDependency = store[keyPath] {
                 guard let dependency = anyDependency as? D else {
